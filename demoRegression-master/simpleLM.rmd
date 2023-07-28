@@ -19,7 +19,7 @@ bears$MONTH<- as.factor(bears$MONTH)
 ```
 
 ## Model LENGTH ~ NECK  this is an example  
-We are going to compute regression models finding one regression model that does the best job in predicting the bear length and its correspondence to the bears neck size, age, head width and head length.
+We are going to compute regression models finding one regression model that does the best job in predicting the bear length and its correspondence to the bears neck size, age, head width and head length, chest and
 
 ```{r}
 simp <- lm(LENGTH~NECK,data=bears)
@@ -27,7 +27,7 @@ plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-the adjusted r square that is the largest and is best. The neck size 0.7476.
+the adjusted r square that is the largest and is best for  The neck size 0.7476.
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
@@ -78,7 +78,14 @@ The adjusted r squared for weight is 0.7423.
 
 ### Conclusion 
 
+The Data shown below was collected from the the test. Concluding, 0.8434 for the head length is the highest R square, making it the best model out of the 6. 
 
+
+Age 0.05073       
+Headwith 0.05321        
+Weight 0.07423        
+Neck 0.07476        
+Chest 0.07869       
 
 
 
